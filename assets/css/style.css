@@ -54,12 +54,22 @@ h1{
  	color: white;
  }
 
+ h6{
+	 font-size: 5px;
+	color: white;
+ }
+
 
  #start {
  	margin-top: 10%;
  	border: 2px solid blue;
  	background: white;
  }
+
+ input[type=radio] + label {
+	 color: red;
+ }
+
 
  #quiz-area h2{
  	margin-top: 50px;
@@ -78,13 +88,11 @@ h1{
  	color: white;
  }
 
+
  button: hover {
  	border: 2px solid blue;
  	background: white;
  }
-
-
-
 
 
 

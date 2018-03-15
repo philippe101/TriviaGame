@@ -24,13 +24,14 @@ var questions = [{
 	correctAnswer: "Four"
 }, {
 	question: "4-What is the name of Tyrell's niece?",
-	answers: ["Ellen", "Pri", "Rachael", "Monica"],
+	answers: ["Ellen", "Pris", "Rachael", "Monica"],
 	correctAnswer: "Rachael"
 }, {
 	question: "5-What is the name of the replicants'leader?",
 	answers: ["Jack", "Leon", "Jamy", "Roy"],
 	correctAnswer: "Roy"
 }];
+
 
 var game = {
 	correct: 0,
@@ -54,11 +55,13 @@ var game = {
 		for (var i = 0; i < questions.length; i++) {
 			panel.append('<h2>' + questions[i].question + '</h2>');
 			for (var j = 0; j < questions[i].answers.length; j++) {
-				panel.append('<input type="radio" name="question' + '-' + i +'"value="' + questions[i].answers[j] + '">' + questions[i].answers[j]);
+				panel.append('<input style="color:red" type="radio"  name="question' + '-' + i +'"value="' + questions[i].answers[j] + '">' + questions[i].answers[j]);		
 			}
-		}
-		panel.append('<button id="done"><font color= "red">Done!</font></button>');
+		}	
+			panel.append('<button id="done"><font color= "red">Done!</font></button>');
+
 	},
+
 	done: function() {
 
 
@@ -133,4 +136,10 @@ var game = {
 
 
 
+
+function newFunction() {
+	$('input[type="radio"]').click(function () {
+		changeColor('label', 'red');
+	});
+}
 
